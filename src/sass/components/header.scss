@@ -1,0 +1,82 @@
+.header {
+    padding-top: 26px;
+    padding-bottom: 60px;
+    
+    @media (min-width: 768px) {
+        padding-top: 36px;
+    }
+    @media (min-width: 1280px) {
+        padding-bottom: 44px;
+    }
+    @media (min-width: 1680px) {
+        padding-top: 28px;
+        padding-bottom: 48px;
+    }
+    
+    &__nav {
+        @include center-flex ();
+    }       
+}
+
+.nav-list {
+    @include center-flex ();
+    @extend %list;
+
+    &__item {
+        font-size: 12px;
+        font-weight: bold;
+
+        &--1280 {
+            display: none;
+            @media (min-width: 1280px) {
+                display: inline-block;
+                margin-right: 45px;
+            }
+        }
+        &--768 {
+            display: none;
+            @media (min-width: 768px) {
+                display: inline-block;
+                margin-right: 45px;
+            }
+            @media (min-width: 1280px) {
+                margin-right: 0;
+            }
+        }
+    }   
+    &__link {
+        @extend %link;
+        color: $text-grey;
+        text-transform: uppercase;
+            &:hover,
+            &:focus {
+            color: $text-orange;
+        }
+        &--320 {
+            color: $text-dark;
+            width: 24px;
+            height: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            @media (min-width: 1280px) {
+                display: none;
+            }
+        } 
+    } 
+    &__link--burger {
+        width: 24px;
+        line-height: 1px;
+        font-weight: bold;
+    }    
+    &__button {
+        @include btn;
+        border: 2px solid $text-grey;
+        background-color: transparent;
+        color: $text-grey;
+            &:hover,
+            &:focus {
+            color: $text-orange;
+            border: 2px solid $text-orange;
+        }        
+    }
+}

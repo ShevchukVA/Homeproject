@@ -1,0 +1,23 @@
+.container {
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: left;
+    
+    @media (min-width: 768px) {
+        max-width: 690px;
+
+    }
+    
+    @media (min-width: 1280px) {
+        max-width: 1210px;
+
+    }
+
+    @media (min-width: 1680px) {
+        max-width: 1340px;
+
+    }
+}
+.text-center {
+    text-align: center;
+}

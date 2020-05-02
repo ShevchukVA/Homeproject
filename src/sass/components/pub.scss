@@ -1,0 +1,83 @@
+.pub {
+    padding-bottom: 88px;
+        @include bg-img($path:'../images/bg/Header_bg.png');    
+
+    @media (min-width: 768px) {
+        @include bg-img($path:'../images/bg/Header_bg.png', $size: contain);
+        padding-bottom: 116px;
+    }
+    @media (min-width: 1280px) {
+        padding-bottom: 128px;
+    }
+    @media (min-width: 1680px) {
+        padding-bottom: 110px;   
+    }    
+}
+.pub-form {
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        @include center-flex();
+    }    
+    &__img {
+        display: inline-block;
+    }
+}
+.pub-about {
+    &__title {
+        text-align: start;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.6;
+        color: $text-dark;
+        margin-bottom: 30px;
+        margin-top: 0;
+    
+        @media (min-width: 768px) {
+            font-size: 26px;    
+            margin-bottom: 22px;
+            letter-spacing: 0.03em;
+        }
+        @media (min-width: 1280px) {
+            font-size: 48px;    
+            margin-bottom: 16px;
+        }
+        @media (min-width: 1680px) {
+            font-size: 58px;    
+        }
+    }
+    &__text {
+        text-align: start;
+        font-size: 15px;
+        font-weight: bold;    
+        margin-bottom: 38px;
+    
+        &--gray {
+            color: $text-grey;
+        }
+        &--dark {
+            color: $text-dark;
+        }
+        &--orange {
+            color: $text-orange;
+        }    
+        @media (min-width: 1280px) {
+            font-size: 18px;    
+            margin-bottom: 66px;
+        }
+        @media (min-width: 1680px) {
+            font-size: 20px;
+            margin-bottom: 48px;    
+        }        
+    }
+    &__button {
+        @include btn;
+        border: none;
+        background-color: $text-orange;
+        color: $link-color;
+        @media (max-width: 767px) {
+            margin-bottom: 36px;
+        }
+    }
+}

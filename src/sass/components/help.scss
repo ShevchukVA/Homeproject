@@ -1,0 +1,152 @@
+.help {    
+    padding-top: 206px;
+    padding-bottom: 50px;
+
+    @media (min-width: 768px) {
+        padding-top: 228px;           
+    }
+    @media (min-width: 1280px) {
+        padding-top: 174px;
+        padding-bottom: 100px;
+    }
+    @media (min-width: 1680px) {
+        padding-top: 302px;
+        padding-bottom: 130px;
+    }
+    &__title {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.6;
+        color: $text-dark;
+        margin-bottom: 36px;
+            
+        @media (min-width: 768px) {
+            font-size: 26px;           
+        }
+        @media (min-width: 1280px) {
+            text-align: start;
+            font-size: 42px;    
+            margin-bottom: 42px;
+        }
+        @media (min-width: 1680px) {
+            font-size: 58px;
+        }
+    }
+    &__list {
+        @extend %list;
+
+        @media (min-width: 768px) {
+            @include center-flex (hor);
+            flex-wrap: wrap;
+            padding: 0 42px;
+        }
+        @media (min-width: 1280px) {
+            padding: 0;
+        }
+        
+    }
+
+}
+.card {
+    width: 290px;
+    padding: 30px 20px;
+    box-shadow: 4px 7px 24px 3px rgba(29, 29, 27, 0.11);
+
+    @media (max-width: 767px) {
+        &:not(:nth-last-child(-n+1)) {
+            margin-bottom: 16px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1279px) {
+        &:not(:nth-last-child(-n+2)) {
+            margin-bottom: 22px;
+        }
+    }    
+    @media (min-width: 1280px) {
+        width: 390px;
+        padding-top: 40px;
+        padding-bottom: 26px;
+        &:not(:nth-last-child(-n+3)) {
+            margin-bottom: 20px;
+        }        
+    }
+    @media (min-width: 1680px) {
+        width: 434px;
+        padding-bottom: 86px;
+    }
+        &:hover,
+        &:focus {
+        color: $link-color;
+        background-color: $text-orange;
+    }
+        &:hover .card__title,
+        &:focus .card__title {
+        color: $link-color;        
+    }
+        &:hover .card__title::after,
+        &:focus .card__title::after {
+        background-color: $link-color;        
+    }
+        &:hover .card__icon,
+        &:focus .card__icon {
+        fill: $link-color;        
+    }        
+
+    &__icon {
+        width: 45px;
+        height: 45px;
+        fill: $text-orange;
+        margin-bottom: 20px;
+        @media (min-width: 1280px) {
+            margin-bottom: 30px;
+        }        
+    }
+    &__title {
+        width: 220px;
+        font-size: 13px;
+        font-weight: bold;
+        color: $text-ld;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+
+        &::after {
+            @include psevdo;
+            position: absolute;
+            width: 26px;
+            height: 2px;
+            left: 50%;
+            top: 48px;
+            transform: translate(-50%);
+            background-color: $text-orange;
+
+            @media (min-width: 1280px) {
+                top: 60px;
+            }
+            @media (min-width: 1680px) {
+                top: 72px;
+            }             
+                &:hover,
+                &:focus {
+                background-color: $link-color;
+                }
+        }            
+        @media (min-width: 1280px) {
+            width: 296px;
+            font-size: 18px;
+        }
+        @media (min-width: 1680px) {
+            width: 325px;
+            font-size: 20px;
+        }
+    }
+    &__text {
+        @media (min-width: 1280px) {
+            font-size: 15px;
+        }
+        @media (min-width: 1680px) {
+            font-size: 18px;
+        }
+    }
+}

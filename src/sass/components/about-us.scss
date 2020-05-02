@@ -1,0 +1,124 @@
+.about-us {
+    position: relative;
+    padding-bottom: 326px;
+    @media (min-width: 768px) {
+        padding-bottom: 240px;
+    }
+    @media (min-width: 1280px) {
+        padding-bottom: 0px;
+    }
+    @media (min-width: 1680px) {
+        padding-bottom: 200px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 900;
+        color: $link-color;
+        background-color: transparent;
+        margin-bottom: 18px;
+        line-height: 1.6;
+        width: 138px;
+            
+        @media (min-width: 768px) {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 26px;
+            width: 350px;            
+        }
+        @media (min-width: 1280px) {
+            font-size: 42px;
+            width: 564px;    
+        }
+        @media (min-width: 1680px) {
+            font-size: 46px;
+            width: 820px;    
+        }        
+    }
+
+    &__list {
+        @extend %list;
+        background-color: $link-color;
+        box-shadow: 15px 5px 24px -10px rgba(29, 29, 27, 0.11);
+        padding: 22px 32px 26px 26px;
+        counter-reset: var;        
+
+        @media (min-width: 768px) {
+            min-width: 690px;
+            @include center-flex (hor);
+            flex-wrap: wrap;
+            padding: 30px 100px;            
+        }
+        @media (min-width: 1280px) {
+            min-width: 1210px;            
+            padding: 56px 100px;
+        }
+    }
+
+    &__item {
+        font-size: 13px;
+        font-weight: bold;
+        color: $text-dark;
+        width: 220px;
+        counter-increment: var;
+        position: relative;
+        
+        &:not(:nth-last-child(-n+1)) {
+            @media (max-width: 767px) {
+                margin-bottom: 14px;
+            }
+        }
+        &:not(:nth-last-child(-n+2)) {
+            @media (min-width: 768px) and (max-width: 1279px) {
+                margin-bottom: 30px;
+            }
+        }
+        &:not(:nth-last-child(-n+3)) {
+            @media (min-width: 1280px) {
+                margin-bottom: 48px;
+            }
+        }        
+        @media (min-width: 1280px) {
+            font-size: 18px;
+            flex: 0 0 295px;    
+        }
+        @media (min-width: 1680px) {
+            font-size: 20px;
+            flex: 0 0 320px;    
+        }
+        &::after {
+            @include psevdo;
+            margin-top: 10px;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            width: 26px;
+            height: 2px;
+            background-color: $text-orange;
+            
+            @media (min-width: 1680px) {
+                top: 3px;
+            }
+        }
+        &::before {
+            display: block;
+            content: '0'counter(var);
+            width: 50px;
+            margin-bottom: 15px;
+            margin-left: 35px;
+            color: $text-orange;            
+        }        
+    }
+}
+.wrapper {
+    position: absolute;
+    bottom: 0px;
+
+    @media (min-width: 768px) {
+        width: 690px;
+    }
+    @media (min-width: 1280px) {
+        width: 1210px;
+    }
+}

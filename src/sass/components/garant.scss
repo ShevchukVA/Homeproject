@@ -1,0 +1,121 @@
+.garant {
+    padding-top: 52px;    
+    @media (min-width: 768px) {
+        padding-top: 60px;                  
+    }
+    @media (min-width: 1280px) {
+        padding-top: 88px;        
+    }
+    @media (min-width: 1680px) {
+        padding-top: 134px;        
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.6;
+        color: $text-ld;
+        text-align: center;
+        margin-bottom: 22px;
+        margin-top: 0;
+    
+        @media (min-width: 768px) {
+            font-size: 26px;
+            margin-bottom: 28px;           
+        }
+        @media (min-width: 1280px) {
+            font-size: 42px;    
+            margin-bottom: 33px;
+        }
+        @media (min-width: 1680px) {
+            font-size: 46px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__bg {
+        @media (max-width: 767px) {
+            background-color: $bc-grey;
+        }
+    }
+
+    &__list {
+        @extend %list;
+        padding: 30px 0px;
+        background-color: $bc-grey;
+        position: relative;
+        
+        @media (min-width: 768px) {
+            padding: 38px 56px;
+        }
+        @media (min-width: 1280px) {
+            padding: 50px 126px;
+        }
+        @media (min-width: 1680px) {
+            padding: 60px 140px;
+        }
+
+               
+    }
+
+    &__item {
+        padding-left: 30px;
+        position: relative;
+        &:not(:last-child) {
+            padding-bottom: 28px;
+            @media (min-width: 1280px) {
+                padding-bottom: 38px;
+            }
+
+            &::before {
+                @include psevdo;
+                position: absolute;
+                border-left: 2px dashed $main-color;
+                height: 100%;
+                top: 6px;
+                left: 6px; 
+                
+                @media (min-width: 1280px) {
+                    left: 8px;
+                }
+            }
+        }
+        @media (min-width: 1280px) {
+            padding-left: 43px;
+        }
+        @media (min-width: 1680px) {
+            padding-left: 52px;
+        }         
+    }
+
+    &__icon {
+        width: 13px;
+        height: 18px;
+        fill: $text-orange;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @media (min-width: 1280px) {
+            width: 20px;
+            height: 27px;
+        }
+    }
+
+    &__text {
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 20px;
+        color: $text-dark;
+        &--orange {
+            color: $text-orange;
+        }         
+        @media (min-width: 1280px) {
+            font-size: 18px;
+            line-height: 30px;    
+        }
+        @media (min-width: 1680px) {
+            font-size: 20px;
+        }
+    }
+}

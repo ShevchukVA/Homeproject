@@ -1,0 +1,92 @@
+.not {
+    padding-bottom: 50px;
+    @media (min-width: 1280px) {
+        padding-bottom: 86px;
+    }
+    @media (min-width: 1680px) {
+        padding-bottom: 130px;
+    }
+
+    &__list {
+        @extend %list;
+        @media (max-width: 767px) {
+            padding: 0 45px;
+        }
+        @media (min-width: 768px) {
+            @include center-flex (hor)
+        }
+    }
+    &__text {
+        display: inline-block;
+        flex: 0 0 130px;
+        font-size: 13px;
+        line-height: 23px;
+        font-weight: bold;
+        color: $text-dark;
+        
+        @media (min-width:1280px) {
+            font-size: 18px;
+            width: 280px;
+            line-height: 28px;
+            position: absolute;
+            top: 50%;
+            left: 85px;
+            transform: translate(0, -50%);           
+        }
+        @media (min-width:1680px) {
+            font-size: 20px;
+            width: 306px;
+        }
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:not(:nth-last-child(-n+1)) {
+            @media (max-width: 767px) {
+                margin-bottom: 26px;
+            }
+        }
+    }
+    &__icon {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        fill: $text-orange;        
+        @media (min-width: 1280px) {
+            width: 44px;
+            height: 44px;
+        }       
+    }
+    &__block {
+        display: inline-block;
+        width: 57px;
+        height: 57px;
+        padding: 10px;
+        margin-right: 10px;
+        border: 2px solid $text-orange;
+        background-color: $link-color;
+        position: relative;
+                
+        @media (min-width:1280px) {
+            width: 100px;
+            height: 100px;
+            padding: 25px;
+            margin-right: 0;             
+        }
+        &::after {
+            @include psevdo;
+            width: 8px;
+            height: 36px;
+            background-color: $link-color;
+            position: absolute;
+            top: 50%;
+            left: 99%;
+            transform: translate(0, -50%);
+
+            @media (min-width:1280px) {
+                height: 70px;                
+            }
+        }
+    }
+}  

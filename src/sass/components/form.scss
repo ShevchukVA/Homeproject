@@ -1,0 +1,135 @@
+.form {
+    @include bg-img($path:'../images/bg/Form_bg-320.png');
+    padding-top: 56px;
+    padding-bottom: 58px ;    
+    @media (min-width: 768px) {
+        @include bg-img($path:'../images/bg/Form_bg-768.png');
+        padding-top: 60px;
+        padding-bottom: 65px ;                  
+    }
+    @media (min-width: 1280px) {
+        @include bg-img($path:'../images/bg/Form_bg-1280.png');
+        padding-top: 82px;
+        padding-bottom: 88px ;        
+    }
+    @media (min-width: 1680px) {
+        @include bg-img($path:'../images/bg/Form_bg-1680.png');
+        padding-top: 122px;
+        padding-bottom: 100px;        
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 900;
+        color: $link-color;
+        line-height: 1.6;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 26px;
+                    
+        @media (min-width: 768px) {
+            font-size: 22px;
+            width: 550px;
+            margin-bottom: 30px;            
+        }
+        @media (min-width: 1280px) {
+            font-size: 38px;
+            width: 940px;
+            margin-bottom: 44px;    
+        }
+        &--orange {
+            color: $text-orange;
+        }
+    }
+
+    &__text {
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 20px;
+        color: $link-color;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+                    
+        @media (min-width: 768px) {
+            font-size: 15px;
+            width: 434px;
+            margin-bottom: 40px;            
+        }
+        @media (min-width: 1280px) {
+            font-size: 18px;
+            line-height: 25px;
+            width: 515px;
+            margin-bottom: 56px;    
+        }
+        @media (min-width: 1680px) {
+            font-size: 25px;
+            line-height: 38px;
+            width: 706px;
+        }
+        &--orange {
+            color: $text-orange;
+        }
+    }   
+}
+
+.form-box {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 768px) {
+        width: 400px;
+    }
+    @media (min-width: 1280px) {
+        width: 620px;
+    }
+
+    &__input {
+        background-color: transparent;
+        width: 280px;
+        height: 50px;
+        color: $link-color;
+        font-size: 13px;
+        font-weight: 600;
+        padding-left: 20px;
+        &:not(:nth-last-child(-n+2)) {
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            width: 400px;
+        }
+        @media (min-width: 1280px) {
+            width: 620px;
+            &:not(:nth-last-child(-n+2)) {
+                margin-bottom: 30px;
+            }
+        }
+        &[type="name"]:valid,
+        &[type="tel"]:valid {
+            outline-color: green;
+        }
+        &[type="name"]:invalid,
+        &[type="tel"]:invalid {
+            outline-color: red;
+        }
+    }
+    
+    &__tel {
+        margin-bottom: 55px;
+
+        @media (min-width: 768px) and (max-width: 1279px) {
+            margin-bottom: 30px;
+        }
+    }    
+
+    &__button {
+        @include btn;
+        border: none;
+        background-color: $text-orange;
+        color: $link-color;
+        
+    }
+}

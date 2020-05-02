@@ -1,0 +1,126 @@
+.pro {
+    padding-top: 48px;
+    padding-bottom: 330px;
+    background-color: $text-ld;
+    position: relative;
+
+    @media (min-width: 768px) {
+        padding-top: 58px;
+        padding-bottom: 184px;
+        @include bg-img($path:'../images/bg/BG-dark-768.png');
+    }
+    @media (min-width: 1280px) {
+        padding-top: 68px;
+        padding-bottom: 260px;
+        @include bg-img($path:'../images/bg/BG-dark.png');
+    }
+    @media (min-width: 1680px) {
+        padding-top: 106px;   
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 900;
+        color: $link-color;
+        line-height: 1.6;
+        width: 234px;
+            
+        @media (min-width: 768px) {
+            font-size: 26px;
+            width: 464px;            
+        }
+        @media (min-width: 1280px) {
+            font-size: 42px;
+            width: 750px;    
+        }
+        @media (min-width: 1680px) {
+            font-size: 46px;
+            width: 820px;    
+        }
+        &--orange {
+            color: $text-orange;
+        }
+    }
+    &__list {
+        @extend %list;
+        background-color: $link-color;
+        box-shadow: 15px 5px 24px -10px rgba(29, 29, 27, 0.11);
+        padding: 26px 50px 35px 30px;
+        counter-reset: var;
+        position: absolute;
+        top: 210px;
+        left: 50%;
+        transform: translate(-50%);
+
+        @media (min-width: 768px) {
+            min-width: 690px;
+            @include center-flex (hor);
+            flex-wrap: wrap;
+            padding: 40px 100px;
+            top: 194px;
+        }
+        @media (min-width: 1280px) {
+            min-width: 1210px;
+            top: 314px;
+            padding: 56px 100px;
+        }
+        @media (min-width: 1680px) {
+            min-width: 1340px;
+            top: 390px;
+        }
+    }
+    &__item {
+        font-size: 13px;
+        font-weight: bold;
+        color: $text-dark;
+        width: 202px;
+        counter-increment: var;
+        position: relative;
+        
+        &:not(:nth-last-child(-n+1)) {
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+            }
+        }
+        &:not(:nth-last-child(-n+2)) {
+            @media (min-width: 768px) and (max-width: 1279px) {
+                margin-bottom: 30px;
+            }
+        }
+        &:not(:nth-last-child(-n+3)) {
+            @media (min-width: 1280px) {
+                margin-bottom: 48px;
+            }
+        }        
+        @media (min-width: 1280px) {
+            font-size: 18px;
+            flex: 0 0 295px;    
+        }
+        @media (min-width: 1680px) {
+            font-size: 20px;
+            flex: 0 0 320px;    
+        }
+        &::after {
+            @include psevdo;
+            margin-top: 10px;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            width: 26px;
+            height: 2px;
+            background-color: $text-orange;
+            
+            @media (min-width: 1680px) {
+                top: 3px;
+            }
+        }
+        &::before {
+            display: block;
+            content: '0'counter(var);
+            width: 50px;
+            margin-bottom: 15px;
+            margin-left: 35px;
+            color: $text-orange;            
+        }        
+    }
+}
