@@ -51,23 +51,9 @@
             &:hover,
             &:focus {
             color: $text-orange;
-        }
-        &--320 {
-            color: $text-dark;
-            width: 24px;
-            height: 12px;
-            display: flex;
-            flex-wrap: wrap;
-            @media (min-width: 1280px) {
-                display: none;
-            }
-        } 
+        }        
     } 
-    &__link--burger {
-        width: 24px;
-        line-height: 1px;
-        font-weight: bold;
-    }    
+        
     &__button {
         @include btn;
         border: 2px solid $text-grey;
@@ -79,4 +65,29 @@
             border: 2px solid $text-orange;
         }        
     }
+}
+.burger {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 24px;
+    height: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: 1280px) {
+            display: none;
+        }        
+    &:hover .burger__item {
+        background-color: $text-orange;
+    }            
+
+    &__item {        
+        background-color: $text-dark;
+        width: 24px;
+        height: 2px;
+        font-weight: bold;
+        &:not(:last-child) {
+            margin-bottom: 3px;
+        }
+    }        
 }

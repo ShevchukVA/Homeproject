@@ -102,7 +102,9 @@
             width: 400px;
         }
         @media (min-width: 1280px) {
+            font-size: 20px;
             width: 620px;
+            height: 70px;
             &:not(:nth-last-child(-n+2)) {
                 margin-bottom: 30px;
             }
@@ -114,6 +116,10 @@
         &[type="name"]:invalid,
         &[type="tel"]:invalid {
             outline-color: red;
+        }
+
+        &::placeholder {
+            color: $link-color;
         }
     }
     
@@ -131,5 +137,8 @@
         background-color: $text-orange;
         color: $link-color;
         
+        @media (min-width: 1280px) {
+            padding: 25px 60px;
+        }
     }
 }
