@@ -1,6 +1,8 @@
 .not {
+    padding-top: 28px;
     padding-bottom: 50px;
     @media (min-width: 1280px) {
+        padding-top: 78px;
         padding-bottom: 86px;
     }
     @media (min-width: 1680px) {

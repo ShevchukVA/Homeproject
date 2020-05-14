@@ -1,13 +1,14 @@
 .pub {
-    padding-bottom: 88px;
-        @include bg-img($path:'../images/bg/Header_bg.png');    
+    padding-bottom: 60px;
+        @include bg-img($path:'../images/bg/Header_bg-320.png');    
 
     @media (min-width: 768px) {
-        @include bg-img($path:'../images/bg/Header_bg.png', $size: contain);
-        padding-bottom: 116px;
+        @include bg-img($path:'../images/bg/Header_bg-768.png');
+        padding-bottom: 90px;
     }
     @media (min-width: 1280px) {
-        padding-bottom: 128px;
+        @include bg-img($path:'../images/bg/Header_bg.png');
+        padding-bottom: 55px;
     }
     @media (min-width: 1680px) {
         padding-bottom: 110px;   
@@ -78,6 +79,9 @@
         color: $link-color;
         @media (max-width: 767px) {
             margin-bottom: 36px;
+        }
+        @media (min-width: 1280px) {
+            padding: 28px 40px;
         }
     }
 }

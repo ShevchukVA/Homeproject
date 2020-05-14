@@ -48,7 +48,7 @@
         padding: 26px 50px 35px 30px;
         counter-reset: var;
         position: absolute;
-        top: 210px;
+        top: 220px;
         left: 50%;
         transform: translate(-50%);
 
@@ -79,7 +79,7 @@
         
         &:not(:nth-last-child(-n+1)) {
             @media (max-width: 767px) {
-                margin-bottom: 20px;
+                margin-bottom: 16px;
             }
         }
         &:not(:nth-last-child(-n+2)) {
@@ -118,7 +118,7 @@
             display: block;
             content: '0'counter(var);
             width: 50px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             margin-left: 35px;
             color: $text-orange;            
         }        

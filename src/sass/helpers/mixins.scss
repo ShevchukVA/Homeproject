@@ -1,15 +1,16 @@
 @mixin btn {
+    font-family: $nav-font;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
-    padding: 15px 15px;
+    padding: 18px 17px;
     cursor: pointer;    
 }
 @mixin psevdo($display: inline-block, $content: '') {
     display: $display;
     content: $content;
 }
-@mixin bg-img($path: '', $size: cover, $repeat: no-repeat, $pos: center,) {
+@mixin bg-img($path: '', $size: 100% 100%, $repeat: no-repeat, $pos: center,) {
     background-image: url($path);
     background-size: $size;
     background-repeat: $repeat;
