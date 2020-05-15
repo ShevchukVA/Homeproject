@@ -1,13 +1,13 @@
 .pub {
     padding-bottom: 60px;
-        @include bg-img($path:'../images/bg/Header_bg-320.png');    
+        @include bg-img($path:'../images/bg/Header_bg-320.png', $size: 100% 100%);    
 
     @media (min-width: 768px) {
-        @include bg-img($path:'../images/bg/Header_bg-768.png');
+        @include bg-img($path:'../images/bg/Header_bg-768.png', $size: 100% 100%);
         padding-bottom: 90px;
     }
     @media (min-width: 1280px) {
-        @include bg-img($path:'../images/bg/Header_bg.png');
+        @include bg-img($path:'../images/bg/Header_bg.png', $size: 100% 100%);
         padding-bottom: 55px;
     }
     @media (min-width: 1680px) {
@@ -30,22 +30,25 @@
         text-align: start;
         font-size: 20px;
         font-weight: 900;
-        line-height: 1.6;
+        line-height: 1.5;
         color: $text-dark;
         margin-bottom: 30px;
         margin-top: 0;
     
         @media (min-width: 768px) {
-            font-size: 26px;    
+            font-size: 26px;
+            line-height: 33px;    
             margin-bottom: 22px;
             letter-spacing: 0.03em;
         }
         @media (min-width: 1280px) {
-            font-size: 48px;    
+            font-size: 48px;
+            line-height: 58px;    
             margin-bottom: 16px;
         }
         @media (min-width: 1680px) {
-            font-size: 58px;    
+            font-size: 58px;
+            line-height: 76px;    
         }
     }
     &__text {

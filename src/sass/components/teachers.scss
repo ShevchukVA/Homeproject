@@ -79,8 +79,9 @@
     &__text {
         line-height: 20px;
         margin-bottom: 26px;
-        padding-left: 16px;
-
+        @media (max-width: 767px) {
+            padding-left: 16px;
+        }
         @media (min-width: 1280px) {
             font-size: 17px;
             line-height: 30px;
@@ -90,7 +91,9 @@
 
      &__link {
          color: $text-orange;
-         padding-left: 16px;
+         @media (max-width: 767px) {
+            padding-left: 16px;
+         }         
          @media (min-width: 1280px) {
             font-size: 17px;
         }
@@ -106,11 +109,13 @@
         @include psevdo;
         margin-top: 10px;
         position: absolute;
-        left: 16px;
         bottom: -24px;
         width: 26px;
         height: 2px;
         background-color: $text-orange;
+        @media (max-width: 767px) {
+            left: 16px;
+        }
     }    
 
     &__item {

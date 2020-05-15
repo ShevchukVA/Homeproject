@@ -117,16 +117,10 @@
             width: 26px;
             height: 2px;
             left: 50%;
-            top: 48px;
+            bottom: -20px;
             transform: translate(-50%);
             background-color: $text-orange;
-
-            @media (min-width: 1280px) {
-                top: 60px;
-            }
-            @media (min-width: 1680px) {
-                top: 72px;
-            }             
+                       
                 &:hover,
                 &:focus {
                 background-color: $link-color;

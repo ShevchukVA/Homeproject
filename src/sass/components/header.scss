@@ -147,14 +147,14 @@
         }
         &__toggle:checked ~ .logo-box {
             position: fixed;
-            left: 20px;
+            right: 62%;
             z-index: 3;
             background-image: url('../images/Logo-320.png');
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-size: cover;
             @media (min-width: 768px) {
-                left: 40px;
+                right: 82%;
             }
         }
         &__toggle:checked ~ .header__link {
@@ -174,7 +174,7 @@
             width: 24px;
             height: 12px;
             cursor: pointer;
-            z-index: 3;
+            z-index: 5;
         }
 
         // добавляем "гамбургер" 

@@ -50,21 +50,19 @@
         @extend %link;
         &--tel {
             font-size: 18px;
+            line-height: 18px;
             font-weight: 600;
             color: $text-ld;
-            display: flex;
-            justify-content: center;
-
+            @include center-flex (ver);
+            
             @media (max-width: 767px) {
                 margin-bottom: 22px;
             }            
             @media (min-width: 768px) {
-                font-size: 20px;
-                line-height: 20px;
+                font-size: 20px;                
             }
             @media (min-width: 1280px) {
-                font-size: 27px;
-                line-height: 27px;
+                font-size: 28px;
             }
         }
 
@@ -86,15 +84,19 @@
 
     &__span {
         margin-right: 10px;
+        height: 20px;
+        @media (min-width: 1280px) {
+            height: 32px;
+        }
     }
     &__icon {
         fill: $text-orange;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         
         @media (min-width: 1280px) {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
         }
     }
     &__img {
