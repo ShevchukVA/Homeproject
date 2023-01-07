@@ -56,6 +56,6 @@
     "usedcss": "^1.0.7"
   },
   "dependencies": {
-    "svg-sprite-loader": "^4.3.0"
+    "svg-sprite-loader": "^6.0.11"
   }
 }
